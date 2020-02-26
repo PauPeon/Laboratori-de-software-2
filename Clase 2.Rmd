@@ -82,11 +82,40 @@ which.min(x)
 which(x == min(x))
 
 ```
+#factor
+
 ```{r}
 fac = factor(c(1,1,1,2,3,2,2,2,3,3,4,3,2,1,1,2,3,4), levels= c(1,2,3,4), labels=c("Sus","Apr","Not","Exc"))
 fac
 ```
 
+#Matrix
+
+```{r}
+M=matrix(seq(1,21, by=2), nrow= 5, ncol= 5, byrow = TRUE)
+M
+```
+```{r}
+M=rbind(c(1, 2, 3, 4), c(2, 5, -8, 3), c(3, -5, 3, -7), c(-6, 3, 8 -4))
+M
+M[2,4]
+M[3,]
+M[,2]
+mean(M)
+colMeans(M)
+colSums(M)
+sum(M)
+cuadrado = function(x){x^2}
+apply(M, MARGIN = 1, FUN = cuadrado)
+apply(M, MARGIN = 2, FUN = cuadrado)
+apply(M, MARGIN = c(1,2), FUN = cuadrado)
+
+solve(M)
+b=c(1,2,3,4)
+solve(M, b)
+
+eigen(M)
+```
 
 
 
