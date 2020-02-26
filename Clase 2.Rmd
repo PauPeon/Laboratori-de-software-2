@@ -1,0 +1,104 @@
+---
+title: "Clase 2"
+author: "Pau Peón"
+date: "21/2/2020"
+output: pdf_document
+---
+
+$$
+\int_{-\infty}^{\infty}{\frac{x^2}{2x}}
+$$
+```{r, echo=FALSE, comment=NA}
+
+
+x=11*23
+
+x
+
+```
+
+
+
+```{r, echo=FALSE}
+
+x = seq(0,2*pi,0.1)
+plot(x,sin(x),type="l",col="blue",lwd=3, xlab=expression(x), ylab="")
+lines(x,cos(x),col="green",lwd=3)
+lines(x, tan(x), col="purple",lwd=3)
+legend("bottomleft",col=c("blue","green","purple"),
+     legend=c("Seno","Coseno", "Tangente"), lwd=3, bty="l")
+
+```
+
+##Vectores
+
+```{r}
+c(1,2,3)
+```
+
+```{r}
+rep("Pau", 5)
+```
+
+```{r}
+bolas = c(rep("Roja", 6), rep("Azul", 2))
+
+```
+```{r}
+año = rep(2001, 10)
+```
+```{r}
+vec = c(16, 0, 1, 20, 1, 7, 88, 5, 1, 9)
+```
+```{r}
+0:20
+```
+```{r}
+seq(0, 20, by=2)
+```
+```{r}
+round(seq(17, 98, length.out = 30), 4)
+```
+```{r}
+x = 1:10
+sapply(x, FUN = cos)
+mean(x)
+diff(x)
+cumsum(x)
+```
+```{r}
+y = seq(1, 20, length.out = 15)
+mi_function <- function(y) {
+  2^y
+}
+ mi_function
+ round(sapply(y, mi_function), 2)
+```
+```{r}
+x = c(2, 34, 1, 5, 65, 23, 1)
+x
+x[x<10]
+which.min(x)
+which(x == min(x))
+
+```
+```{r}
+fac = factor(c(1,1,1,2,3,2,2,2,3,3,4,3,2,1,1,2,3,4), levels= c(1,2,3,4), labels=c("Sus","Apr","Not","Exc"))
+fac
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
